@@ -6,17 +6,15 @@
 
 ## 程序来源
 
-<img src="./image/map.png" width=390px height=350px/>
-<img src="./image/ban.png" width=390px height=121px/>
-
 ![map](/image/map.png)
 
 ![ban](/image/ban.png)
 
-## 有关链接
+## 被封锁链接及ip
 
 - api.onedrive.com
 - chi01pap001.storage.live.com
+- **13.107.42.12**
 
 ## 程序实现
 
