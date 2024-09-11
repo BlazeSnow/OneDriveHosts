@@ -6,12 +6,13 @@
 
 ## 程序来源
 
-<img src="./image/api.onedrive.com.png" width=390px height=350px/>
+<img src="./image/map.png" width=390px height=350px/>
+<img src="./image/ban.png" width=390px height=121px/>
 
-|             网站             | 被封锁的ip地址 |                        测试网址                        |
-| :--------------------------: | :------------: | :----------------------------------------------------: |
-|       api.onedrive.com       |  13.107.42.12  |       https://www.itdog.cn/ping/api.onedrive.com       |
-| chi01pap001.storage.live.com |  13.107.42.12  | https://www.itdog.cn/ping/chi01pap001.storage.live.com |
+## 有关链接
+
+- api.onedrive.com
+- chi01pap001.storage.live.com
 
 ## 程序实现
 
