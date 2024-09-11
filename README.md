@@ -6,7 +6,7 @@
 
 ## 程序来源
 
-![image](/image/api.onedrive.com.png)
+<img src="./image/api.onedrive.com.png" align="center" width=390px height=350px />
 
 https://www.itdog.cn/ping/api.onedrive.com
 
