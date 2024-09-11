@@ -19,4 +19,4 @@
 
 若使用SwitchHosts工具：https://raw.githubusercontent.com/BlazeSnow/OneDriveHosts/main/hosts
 
-https://github.com/oldj/SwitchHosts
+SwitchHosts：https://github.com/oldj/SwitchHosts
