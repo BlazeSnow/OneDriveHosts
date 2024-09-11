@@ -6,12 +6,15 @@
 
 ## 程序来源
 
-<img src="./image/api.onedrive.com.png" width=390px height=350px/>
+![ban](/image/ban.png)
 
-|             网站             | 被封锁的ip地址 |                        测试网址                        |
-| :--------------------------: | :------------: | :----------------------------------------------------: |
-|       api.onedrive.com       |  13.107.42.12  |       https://www.itdog.cn/ping/api.onedrive.com       |
-| chi01pap001.storage.live.com |  13.107.42.12  | https://www.itdog.cn/ping/chi01pap001.storage.live.com |
+如上图所示，部分地区封锁了OneDrive的网站的ip，导致OneDrive无法正常使用，需要通过指定ip的方法使用OneDrive的其他ip
+
+## 被封锁链接及ip
+
+- api.onedrive.com
+- chi01pap001.storage.live.com
+- **13.107.42.12**
 
 ## 程序实现
 
