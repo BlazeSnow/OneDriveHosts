@@ -6,9 +6,9 @@
 
 ## 程序来源
 
-![map](/image/map.png)
-
 ![ban](/image/ban.png)
+
+如上图所示，部分地区封锁了OneDrive的网站的ip，导致OneDrive无法正常使用，需要通过指定ip的方法使用OneDrive的其他ip
 
 ## 被封锁链接及ip
 
