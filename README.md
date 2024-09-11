@@ -10,11 +10,11 @@
 
 如上图所示，部分地区封锁了OneDrive的网站的ip，导致OneDrive无法正常使用，需要通过指定ip的方法使用OneDrive的其他ip
 
-## 被封锁链接及ip
+## 被封锁网址及ip
 
 - api.onedrive.com
 - chi01pap001.storage.live.com
-- **13.107.42.12**
+- 13.107.42.12
 
 ## 程序实现
 
@@ -23,3 +23,7 @@
 若使用SwitchHosts工具：https://raw.githubusercontent.com/BlazeSnow/OneDriveHosts/main/hosts
 
 SwitchHosts：https://github.com/oldj/SwitchHosts
+
+## 程序成果
+
+![effect](/image/effect.png)
