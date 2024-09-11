@@ -23,10 +23,10 @@ def main():
             if ip not in banned_ips:
                 valid_entries.append((ip, website))
 
-    # 将结果写入 hosts 文件
+    # 将结果写入 hosts 文件，使用制表符分隔
     with open('hosts', 'w') as hosts_file:
         for ip, website in valid_entries:
-            hosts_file.write(f"{ip} {website}\n")
+            hosts_file.write(f"{ip}\t{website}\n")
 
 if __name__ == '__main__':
     main()
