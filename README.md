@@ -17,6 +17,6 @@
 
 在hosts文件内添加此文件内容：[点击跳转](/hosts)
 
-若使用SwitchHosts工具：
+若使用SwitchHosts工具：https://raw.githubusercontent.com/BlazeSnow/OneDriveHosts/main/hosts
 
 https://github.com/oldj/SwitchHosts
