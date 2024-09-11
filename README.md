@@ -9,6 +9,10 @@
 <img src="./image/map.png" width=390px height=350px/>
 <img src="./image/ban.png" width=390px height=121px/>
 
+![map](/image/map.png)
+
+![ban](/image/ban.png)
+
 ## 有关链接
 
 - api.onedrive.com
