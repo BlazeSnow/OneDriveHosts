@@ -8,16 +8,15 @@
 
 <img src="./image/api.onedrive.com.png" width=390px height=350px/>
 
-|             网站             | 被封锁的ip地址 |
-| :--------------------------: | :------------: |
-|       api.onedrive.com       |  13.107.42.12  |
-| chi01pap001.storage.live.com |  13.107.42.12  |
+|             网站             | 被封锁的ip地址 |                        测试网址                        |
+| :--------------------------: | :------------: | :----------------------------------------------------: |
+|       api.onedrive.com       |  13.107.42.12  |       https://www.itdog.cn/ping/api.onedrive.com       |
+| chi01pap001.storage.live.com |  13.107.42.12  | https://www.itdog.cn/ping/chi01pap001.storage.live.com |
 
 ## 程序实现
 
-在hosts文件内添加：
+在hosts文件内添加此文件内容：[点击跳转](/hosts)
 
-```txt
-13.107.43.12    api.onedrive.com
-13.105.28.16    chi01pap001.storage.live.com
-```
+若使用SwitchHosts工具：
+
+https://github.com/oldj/SwitchHosts
