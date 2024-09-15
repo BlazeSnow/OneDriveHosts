@@ -9,11 +9,16 @@ using namespace std;
 
 int main()
 {
-    string domain = "api.onedrive.com";
-    vector<asio::ip::tcp::endpoint> endpoints = get_ips(domain);
-    for (const auto &endpoint : endpoints)
+    asio::io_service ioservice;
+    asio::io_service my_io_service;
+    asio::ip::tcp::resolver resolver(my_io_service);
+    asio::ip::tcp::resolver::query query("api.onedrive.com", "http");
+    asio::ip::tcp::resolver::iterator iter = resolver.resolve(query);
+    asio::ip::tcp::resolver::iterator end; // End marker.
+    while (iter != end)
     {
-        cout << endpoint.address().to_string() << "\t" << domain << endl;
+        asio::ip::tcp::endpoint endpoint = *iter++;
+        std::cout << endpoint << std::endl;
     }
     system("pause");
     return 0;
