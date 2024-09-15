@@ -12,9 +12,9 @@ int main()
     asio::io_service ioservice;
     asio::io_service my_io_service;
     asio::ip::tcp::resolver resolver(my_io_service);
-    asio::ip::tcp::resolver::query query("api.onedrive.com", "http");
+    asio::ip::tcp::resolver::query query("google.com", "http");
     asio::ip::tcp::resolver::iterator iter = resolver.resolve(query);
-    asio::ip::tcp::resolver::iterator end; // End marker.
+    asio::ip::tcp::resolver::iterator end;
     while (iter != end)
     {
         asio::ip::tcp::endpoint endpoint = *iter++;
