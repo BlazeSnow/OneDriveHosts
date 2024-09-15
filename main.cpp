@@ -1,25 +1,30 @@
-#include <asio.hpp>
-#include <iostream>
-#include <vector>
-#include <string>
-#include <system_error>
-#include <cstdlib>
+#include <QCoreApplication>
+#include <QDnsLookup>
 
-using namespace std;
-
-int main()
+int main(int argc, char *argv[])
 {
-    asio::io_service ioservice;
-    asio::io_service my_io_service;
-    asio::ip::tcp::resolver resolver(my_io_service);
-    asio::ip::tcp::resolver::query query("api.onedrive.com", "http");
-    asio::ip::tcp::resolver::iterator iter = resolver.resolve(query);
-    asio::ip::tcp::resolver::iterator end;
-    while (iter != end)
-    {
-        asio::ip::tcp::endpoint endpoint = *iter++;
-        std::cout << endpoint << std::endl;
-    }
-    system("pause");
-    return 0;
+    QCoreApplication app(argc, argv);
+
+    // 创建 QDnsLookup 对象
+    QDnsLookup *lookup = new QDnsLookup();
+    lookup->setNameserver("1.1.1.1");
+    lookup->setHostName("api.onedrive.com");
+
+    // 连接到 namedHost() 信号
+    QObject::connect(lookup, &QDnsLookup::finished, [lookup] {
+        if (lookup->error() == QDnsLookup::NoError) {
+            qDebug() << "IP addresses for" << lookup->hostName();
+            foreach (const QHostAddress &address, lookup->addresses()) {
+                qDebug() << address.toString();
+            }
+        } else {
+            qDebug() << "DNS lookup failed:" << lookup->errorString();
+        }
+        lookup->deleteLater();
+    });
+
+    // 开始查询
+    lookup->exec();
+
+    return app.exec();
 }
