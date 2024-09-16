@@ -1,6 +1,5 @@
 {
     "cmake.configureArgs": [
-        "-DCMAKE_WINDOWS_EXPORT_ALL_SYMBOLS=TRUE",
         "-DCMAKE_TOOLCHAIN_FILE=D:/vcpkg/scripts/buildsystems/vcpkg.cmake"
     ]
 }
