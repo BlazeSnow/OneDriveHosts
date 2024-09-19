@@ -11,7 +11,8 @@ int main(int argc, char *argv[])
     lookup->setHostName("api.onedrive.com");
 
     // 连接到 namedHost() 信号
-    QObject::connect(lookup, &QDnsLookup::finished, [lookup] {
+    QObject::connect(lookup, &QDnsLookup::finished, [lookup]
+                     {
         if (lookup->error() == QDnsLookup::NoError) {
             qDebug() << "IP addresses for" << lookup->hostName();
             foreach (const QHostAddress &address, lookup->addresses()) {
@@ -20,8 +21,7 @@ int main(int argc, char *argv[])
         } else {
             qDebug() << "DNS lookup failed:" << lookup->errorString();
         }
-        lookup->deleteLater();
-    });
+        lookup->deleteLater(); });
 
     // 开始查询
     lookup->exec();
