@@ -4,6 +4,7 @@
 #include <QList>
 #include <QTextStream>
 #include <iostream>
+#include <cstdlib> // 包含 system 函数
 
 // 获取用户输入需要排除的IP地址
 QList<QHostAddress> getExcludedIPs()
@@ -36,6 +37,9 @@ QList<QHostAddress> getExcludedIPs()
 
 int main(int argc, char *argv[])
 {
+    // 设置终端编码为UTF-8
+    system("chcp 65001");
+
     QCoreApplication a(argc, argv);
 
     QTextStream qin(stdin);
@@ -51,6 +55,7 @@ int main(int argc, char *argv[])
     if (hostInfo.error() != QHostInfo::NoError)
     {
         std::cerr << "无法解析主机名: " << hostInfo.errorString().toStdString() << std::endl;
+        system("pause");
         return -1;
     }
 
@@ -66,5 +71,7 @@ int main(int argc, char *argv[])
         }
     }
 
+    // 暂停程序，以防终端窗口立即关闭
+    system("pause");
     return 0;
 }
