@@ -1,4 +1,3 @@
-#include <QCoreApplication>
 #include <QHostInfo>
 #include <QHostAddress>
 #include <QList>
@@ -39,8 +38,6 @@ int main(int argc, char *argv[])
 {
     // 设置终端编码为UTF-8
     system("chcp 65001");
-
-    QCoreApplication a(argc, argv);
 
     QTextStream qin(stdin);
     QString hostname;
