@@ -1,3 +1,6 @@
 {
-    "cmake.cmakePath": "D:/Qt/Tools/CMake_64/bin/cmake.exe"
+    "cmake.cmakePath": "D:/Qt/Tools/CMake_64/bin/cmake.exe",
+    "C_Cpp.default.includePath": [
+        "D:/Qt/6.7.2/mingw_64/include",
+    ]
 }
