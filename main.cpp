@@ -1,4 +1,4 @@
-#include <QHostInfo>
+#include <QtNetwork/QHostInfo>
 #include <QHostAddress>
 #include <QList>
 #include <QTextStream>
@@ -46,9 +46,10 @@ int main(int argc, char *argv[])
     std::cout << "请输入网址: ";
     hostname = qin.readLine().trimmed();
 
-    // 获取所有IP地址
+    // 使用 QHostInfo::lookupHost 来同步获取所有IP地址
     QHostInfo hostInfo = QHostInfo::fromName(hostname);
 
+    // 检查是否有错误
     if (hostInfo.error() != QHostInfo::NoError)
     {
         std::cerr << "无法解析主机名: " << hostInfo.errorString().toStdString() << std::endl;
