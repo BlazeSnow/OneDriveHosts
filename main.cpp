@@ -1,36 +1,29 @@
 #include <QCoreApplication>
-#include <QHostInfo>
 #include <QDebug>
-#include <QProcess>
+#include <QHostInfo>
 
 int main(int argc, char *argv[])
 {
-    QCoreApplication app(argc, argv);
-
-    // 保存原始DNS设置
-    QStringList getDnsCommand = {"netsh", "interface", "ipv4", "show", "dns"};
-    QProcess getDnsProcess;
-    getDnsProcess.start(getDnsCommand.join(" "));
-    getDnsProcess.waitForFinished();
-    QString originalDnsSettings = getDnsProcess.readAllStandardOutput();
-
-    // 设置DNS服务器地址（以管理员身份运行时生效）
-    QString dnsServer = "1.1.1.1";
-    QProcess::execute("netsh", QStringList() << "interface" << "ipv4" << "set" << "dns" << "name=\"Wi - Fi\"" << "static" << dnsServer);
-
-    QHostInfo::lookupHost("api.onedrive.com", [originalDnsSettings](const QHostInfo &host)
-                          {
-        if (host.error()!= QHostInfo::NoError) {
-            qDebug() << "DNS lookup failed:" << host.errorString();
-            return;
+    QCoreApplication a(argc, argv);
+    QString url = "example.com"; // 这里替换为实际的网址
+    QHostInfo info = QHostInfo::fromName(url);
+    QList<QHostAddress> addrs = info.addresses();
+    qDebug() << "All IP addresses for " << url << ":";
+    for (int i = 0; i < addrs.size(); ++i)
+    {
+        qDebug() << addrs.at(i).toString();
+    }
+    // 假设这里有用户输入要排除的IP地址列表，为了简单演示，这里直接写死要排除的IP
+    QStringList excludeList;
+    excludeList << "192.168.1.1";
+    qDebug() << "IP addresses after exclusion:";
+    for (int i = 0; i < addrs.size(); ++i)
+    {
+        QString ip = addrs.at(i).toString();
+        if (!excludeList.contains(ip))
+        {
+            qDebug() << ip;
         }
-        qDebug() << "IP addresses for" << host.hostName();
-        foreach (const QHostAddress& address, host.addresses()) {
-            qDebug() << address.toString();
-        }
-
-        // 恢复原始DNS设置
-        QProcess::execute("netsh", QStringList() << "interface" << "ipv4" << "set", QStringList() << "dns" << "name=\"Wi - Fi\"" << originalDnsSettings.split("\n").first().split(": ").last()); });
-
-    return app.exec();
+    }
+    return a.exec();
 }
