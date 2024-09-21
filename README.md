@@ -19,6 +19,8 @@
 
 ## 程序实现
 
+### 直接修改hosts
+
 在hosts文件内添加此文件内容：[点击跳转](/hosts)
 
 ### SwitchHosts
