@@ -21,9 +21,14 @@
 
 在hosts文件内添加此文件内容：[点击跳转](/hosts)
 
-若使用SwitchHosts工具：https://raw.githubusercontent.com/BlazeSnow/OneDriveHosts/main/hosts
+### SwitchHosts
 
-SwitchHosts：https://github.com/oldj/SwitchHosts
+SwitchHosts页面：https://github.com/oldj/SwitchHosts
+
+若使用SwitchHosts工具：
+
+- GitHub：https://raw.githubusercontent.com/BlazeSnow/OneDriveHosts/main/hosts
+- Gitee：https://gitee.com/blazesnow/OneDriveHosts/raw/main/hosts
 
 ## 程序成果
 
