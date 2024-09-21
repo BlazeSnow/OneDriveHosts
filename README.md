@@ -14,6 +14,7 @@
 
 - api.onedrive.com
 - chi01pap001.storage.live.com
+- d.docs.live.net
 - 13.107.42.12
 
 ## 程序实现
