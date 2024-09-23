@@ -10,6 +10,8 @@
 
 如上图所示，部分地区封锁了OneDrive的网站的ip，导致OneDrive无法正常使用，需要通过指定ip的方法使用OneDrive的其他ip
 
+测试网址：https://www.itdog.cn/ping/
+
 ## 被封锁网址及ip
 
 - api.onedrive.com
