@@ -31,8 +31,14 @@ SwitchHosts页面：https://github.com/oldj/SwitchHosts
 
 若使用SwitchHosts工具：
 
-- GitHub：https://raw.githubusercontent.com/BlazeSnow/OneDriveHosts/main/hosts
-- Gitee：https://gitee.com/blazesnow/OneDriveHosts/raw/main/hosts
+- GitHub：
+```txt
+https://raw.githubusercontent.com/BlazeSnow/OneDriveHosts/main/hosts
+```
+- Gitee：
+```txt
+https://gitee.com/blazesnow/OneDriveHosts/raw/main/hosts
+```
 
 ## 程序成果
 
