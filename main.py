@@ -28,7 +28,11 @@ def main():
                 valid_entries.append((ip, website))
 
     # 将结果写入 hosts 文件，使用制表符分隔
-    with open('hosts', 'w') as hosts_file:
+    with open('hosts', 'w', encoding='utf8') as hosts_file:
+        hosts_file.write(
+            f"# 此文件来源于：https://github.com/BlazeSnow/OneDriveHosts\n")
+        hosts_file.write(
+            f"# 更新时间：2024年9月23日16点42分\n\n")
         for ip, website in valid_entries:
             hosts_file.write(f"{ip}\t{website}\n")
 
