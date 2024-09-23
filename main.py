@@ -11,7 +11,7 @@ def get_ipv4_addresses(domain):
         return []
 
 
-domain = "github.com"
+domain = "api.onedrive.com"
 ips = get_ipv4_addresses(domain)
 for ip in ips:
     print(ip)
