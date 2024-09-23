@@ -32,6 +32,8 @@ def main():
         hosts_file.write(
             f"# 此文件来源于：https://github.com/BlazeSnow/OneDriveHosts\n")
         hosts_file.write(
+            f"# 仓库镜像：https://gitee.com/blazesnow/OneDriveHosts\n")
+        hosts_file.write(
             f"# 更新时间：2024年9月23日16点42分\n\n")
         for ip, website in valid_entries:
             hosts_file.write(f"{ip}\t{website}\n")
