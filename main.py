@@ -1,3 +1,5 @@
+# 此python代码文件由ChatGPT 4o编写：https://chatgpt.com/
+
 import socket
 
 
