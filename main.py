@@ -1,6 +1,7 @@
 # 此python代码文件由ChatGPT 4o编写：https://chatgpt.com/
 
 import socket
+import datetime
 
 
 def get_ips_from_hostname(hostname):
@@ -33,8 +34,9 @@ def main():
             f"# 此文件来源于：https://github.com/BlazeSnow/OneDriveHosts\n")
         hosts_file.write(
             f"# 仓库镜像：https://gitee.com/blazesnow/OneDriveHosts\n")
+        current_time = datetime.datetime.now()
         hosts_file.write(
-            f"# 更新时间：2024年9月23日16点42分\n\n")
+            f"# 更新时间：" + str(current_time) + "\n\n")
         for ip, website in valid_entries:
             hosts_file.write(f"{ip}\t{website}\n")
 
