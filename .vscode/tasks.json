@@ -16,7 +16,13 @@
                 "D:\\Qt\\6.7.3\\mingw_64\\lib",
                 "-lQt5Core",
                 "-lQt5Gui",
-                "-lQt5Widgets"
+                "-lQt5Widgets",
+                "-I",
+                "D:\\Qt\\6.7.3\\mingw_64\\include\\QtWidgets",
+                "-I",
+                "D:\\Qt\\6.7.3\\mingw_64\\include\\QtGui",
+                "-I",
+                "D:\\Qt\\6.7.3\\mingw_64\\include\\QtCore"
             ],
             "options": {
                 "cwd": "${fileDirname}"
