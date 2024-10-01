@@ -4,16 +4,16 @@
         {
             "type": "cppbuild",
             "label": "C/C++: g++.exe build active file",
-            "command": "D:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe",
+            "command": "D:\\Qt\\6.7.3\\mingw_64\\bin\\g++.exe",
             "args": [
                 "-g",
                 "${file}",
                 "-o",
                 "${fileDirname}\\${fileBasenameNoExtension}.exe",
                 "-I",
-                "D:\\Qt\\Tools\\mingw1120_64\\include",
+                "D:\\Qt\\6.7.3\\mingw_64\\include",
                 "-L",
-                "D:\\Qt\\Tools\\mingw1120_64\\lib",
+                "D:\\Qt\\6.7.3\\mingw_64\\lib",
                 "-lQt5Core",
                 "-lQt5Gui",
                 "-lQt5Widgets"
