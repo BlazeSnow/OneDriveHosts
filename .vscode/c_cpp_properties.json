@@ -7,7 +7,7 @@
                 "D:\\Qt\\6.7.3\\mingw_64\\include"
             ],
             "defines": [],
-            "compilerPath": "D:\\Qt\\6.7.3\\mingw_64\\bin\\g++.exe",
+            "compilerPath": "D:\\mingw64\\bin\\g++.exe",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "intelliSenseMode": "gcc-x64"

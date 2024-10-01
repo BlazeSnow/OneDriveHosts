@@ -4,7 +4,7 @@
         {
             "type": "cppbuild",
             "label": "C/C++: g++.exe build active file",
-            "command": "D:\\Qt\\6.7.3\\mingw_64\\bin\\g++.exe",
+            "command": "D:\\mingw64\\bin\\g++.exe",
             "args": [
                 "-g",
                 "${file}",
