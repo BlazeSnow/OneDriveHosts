@@ -4,10 +4,10 @@
             "name": "Win32",
             "includePath": [
                 "${workspaceFolder}/**",
-                "D:\\Qt\\Tools\\mingw1120_64\\include"
+                "D:\\Qt\\6.7.3\\mingw_64\\include"
             ],
             "defines": [],
-            "compilerPath": "D:\\Qt\\Tools\\mingw1120_64\\bin\\g++.exe",
+            "compilerPath": "D:\\Qt\\6.7.3\\mingw_64\\bin\\g++.exe",
             "cStandard": "c11",
             "cppStandard": "c++17",
             "intelliSenseMode": "gcc-x64"
