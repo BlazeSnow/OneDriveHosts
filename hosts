@@ -1,24 +1,23 @@
 # ------以下是BlazeSnow/OneDriveHosts的内容------
+
 # 此文件来源于：https://github.com/BlazeSnow/OneDriveHosts
 # 仓库镜像：https://gitee.com/blazesnow/OneDriveHosts
-# 更新时间：2024年10月2日10点14分
+# 更新时间：2024年10月5日11点50分
 
 # ping api.onedrive.com
-# 13.107.42.12
-40.90.142.240 api.onedrive.com
-20.135.1.1 api.onedrive.com
-20.135.6.15 api.onedrive.com
-20.135.17.52 api.onedrive.com
-40.90.133.97 api.onedrive.com
+13.105.28.1 api.onedrive.com
+20.135.6.7 api.onedrive.com
+20.135.2.0 api.onedrive.com
+40.90.130.199 api.onedrive.com
+20.135.17.16 api.onedrive.com
 # ping chi01pap001.storage.live.com
-# 13.107.42.12
 13.105.28.16 chi01pap001.storage.live.com
 # ping d.docs.live.net
-# 13.107.42.12
-40.90.130.197 d.docs.live.net
-20.143.38.2 d.docs.live.net
 20.135.6.15 d.docs.live.net
-20.135.17.50 d.docs.live.net
-40.90.133.97 d.docs.live.net
+40.90.133.102 d.docs.live.net
+20.135.4.166 d.docs.live.net
+13.105.74.49 d.docs.live.net
+40.79.207.80 d.docs.live.net
+20.135.6.11 d.docs.live.net
 
 # ------以上是BlazeSnow/OneDriveHosts的内容------
