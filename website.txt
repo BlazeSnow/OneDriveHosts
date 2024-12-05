@@ -38,7 +38,6 @@ bnz07pap001.storage.live.com
 bnz07pap001files.storage.live.com
 chi01pap001.storage.live.com
 chi01pap002.storage.live.com
-chi01pap002.storage.live.com
 chi01pap002files.storage.live.com
 dsm01pap004.storage.live.com
 dsm01pap004files.storage.live.com
