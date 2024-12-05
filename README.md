@@ -24,9 +24,11 @@ hosts文件位置：```C:\WINDOWS\system32\drivers\etc\hosts```，在hosts文件
 
 ### 使用```SwitchHosts```
 
-SwitchHosts页面：https://github.com/oldj/SwitchHosts
+```SwitchHosts```页面：<https://switchhosts.vercel.app/zh>
 
-若使用SwitchHosts工具：
+```SwitchHosts```下载链接：<https://github.com/oldj/SwitchHosts/releases>
+
+若使用```SwitchHosts```工具：
 
 - GitHub：
 ```txt
