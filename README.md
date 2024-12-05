@@ -12,20 +12,17 @@
 
 测试网址：https://www.itdog.cn/ping/
 
-## 被封锁网址及ip
+## 被封锁的ip
 
-- api.onedrive.com
-- chi01pap001.storage.live.com
-- d.docs.live.net
-- 13.107.42.12
+1. ```13.107.42.12```
 
 ## 程序实现
 
-### 直接修改hosts
+### 直接修改hosts文件
 
-在hosts文件内添加此文件内容：[点击跳转](/hosts)
+hosts文件位置：```C:\WINDOWS\system32\drivers\etc\hosts```，在hosts文件内添加此文件内容：[点击跳转](/hosts)
 
-### SwitchHosts
+### 使用```SwitchHosts```
 
 SwitchHosts页面：https://github.com/oldj/SwitchHosts
 
