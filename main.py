@@ -1,5 +1,6 @@
 import socket
 import dns.resolver
+import time
 
 
 # 读取文件内容
@@ -76,10 +77,12 @@ def main():
 
     # 解析 IP 地址
     mappings = []
-    for website in websites:
+    for i, website in enumerate(websites):
         ip = get_ip_from_hostname(website, resolver)
         if ip:
             mappings.append((ip, website))
+        if i % 5 == 0:  # 每处理 5 个请求暂停 1 秒
+            time.sleep(1)
 
     # 写入结果
     write_hosts_file(output_file, mappings)
