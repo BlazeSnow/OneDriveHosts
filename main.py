@@ -1,4 +1,5 @@
 import socket
+import dns.resolver
 
 
 # 读取文件内容
@@ -11,29 +12,38 @@ def read_file(file_path):
         return []
 
 
+# 配置自定义 DNS 解析器
+def configure_dns_resolver():
+    resolver = dns.resolver.Resolver()
+    resolver.nameservers = ["119.29.29.29"]
+    return resolver
+
+
 # 解析通配符网址
-def resolve_wildcard_hostname(hostname):
+def resolve_wildcard_hostname(hostname, resolver):
     if "*" in hostname:
         parts = hostname.split(".")
         if parts[0] == "*":
             wildcard_domain = ".".join(parts[1:])
             try:
-                ip = socket.gethostbyname(wildcard_domain)
+                answer = resolver.resolve(wildcard_domain, "A")
+                ip = answer[0].to_text()
                 print(f"解析通配符地址 {hostname} 为 {ip}")
                 return ip
-            except socket.gaierror:
+            except (dns.resolver.NXDOMAIN, dns.resolver.NoAnswer):
                 print(f"无法解析通配符地址 {hostname} 的 IP。")
                 return None
     return None
 
 
 # 获取网址的 IP 地址
-def get_ip_from_hostname(hostname):
+def get_ip_from_hostname(hostname, resolver):
     if "*" in hostname:
-        return resolve_wildcard_hostname(hostname)
+        return resolve_wildcard_hostname(hostname, resolver)
     try:
-        return socket.gethostbyname(hostname)
-    except socket.gaierror:
+        answer = resolver.resolve(hostname, "A")
+        return answer[0].to_text()
+    except (dns.resolver.NXDOMAIN, dns.resolver.NoAnswer):
         print(f"无法解析 {hostname} 的 IP 地址。")
         return None
 
@@ -61,10 +71,13 @@ def main():
         print("没有可处理的网址。")
         return
 
+    # 配置 DNS 解析器
+    resolver = configure_dns_resolver()
+
     # 解析 IP 地址
     mappings = []
     for website in websites:
-        ip = get_ip_from_hostname(website)
+        ip = get_ip_from_hostname(website, resolver)
         if ip:
             mappings.append((ip, website))
 
