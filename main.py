@@ -81,8 +81,8 @@ def main():
         ip = get_ip_from_hostname(website, resolver)
         if ip:
             mappings.append((ip, website))
-        if i % 5 == 0:  # 每处理 5 个请求暂停 1 秒
-            time.sleep(1)
+        if i % 2 == 0:  # 每处理 2 个请求暂停 2 秒
+            time.sleep(2)
 
     # 写入结果
     write_hosts_file(output_file, mappings)
