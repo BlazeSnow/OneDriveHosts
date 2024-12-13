@@ -2,10 +2,14 @@
 
 # 来源：https://github.com/BlazeSnow/OneDriveHosts
 # 镜像：https://gitee.com/blazesnow/OneDriveHosts
-# 更新时间：2024年12月5日11点42分
+# 更新时间：2024年12月13日23点08分
 
+13.107.43.12 apis.live.net
 13.107.43.12 api.onedrive.com
+13.107.43.12 docs.live.net
 13.107.43.12 d.docs.live.net
+13.107.43.12 settings.live.net
+13.107.43.12 storage.msn.com
 
 # 以下内容来自UsbEAm Hosts Editor的规则
 # 来源：https://www.dogfight360.com/blog/475/

@@ -1,5 +1,16 @@
 # 更新日志
 
+## v1.1.2
+
+2024年12月13日23点14分
+
+- 添加网址：
+    - apis.live.net
+    - docs.live.net
+    - settings.live.net
+    - storage.msn.com
+- 来源：<https://learn.microsoft.com/zh-cn/sharepoint/required-urls-and-ports>
+
 ## v1.1.1
 
 2024年12月5日11点42分
@@ -12,6 +23,7 @@
 2024年12月5日11点27分
 
 - 补充了```UsbEAm Hosts Editor```的规则，使hosts解析更完整
+- 来源：<https://www.dogfight360.com/blog/475/>
 
 ## v1.0.7
 
