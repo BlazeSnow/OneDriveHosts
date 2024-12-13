@@ -23,6 +23,7 @@
 2024年12月5日11点27分
 
 - 补充了```UsbEAm Hosts Editor```的规则，使hosts解析更完整
+- 来源：<https://www.dogfight360.com/blog/475/>
 
 ## v1.0.7
 
