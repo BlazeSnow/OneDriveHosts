@@ -12,34 +12,6 @@ Aliases:  *.files.1drv.com
           common.be.1drv.com.l-0003.dc-msedge.net.l-0003.l-msedge.net
 
 
-C:\Repository\OneDriveHosts>nslookup apis.live.net 223.5.5.5
-服务器:  public1.alidns.com
-Address:  223.5.5.5
-
-非权威应答:
-名称:    l-0003.l-msedge.net
-Address:  13.107.42.12
-Aliases:  apis.live.net
-          common-afd.fe.1drv.com
-          odc-commonafd-geo.onedrive.akadns.net
-          odc-commonafd-brs.onedrive.akadns.net
-          common.be.1drv.com.l-0003.dc-msedge.net.l-0003.l-msedge.net
-
-
-C:\Repository\OneDriveHosts>nslookup docs.live.net 223.5.5.5
-服务器:  public1.alidns.com
-Address:  223.5.5.5
-
-非权威应答:
-名称:    l-0003.l-msedge.net
-Address:  13.107.42.12
-Aliases:  docs.live.net
-          common-afd.fe.1drv.com
-          odc-commonafd-geo.onedrive.akadns.net
-          odc-commonafd-brs.onedrive.akadns.net
-          common.be.1drv.com.l-0003.dc-msedge.net.l-0003.l-msedge.net
-
-
 C:\Repository\OneDriveHosts>nslookup *.docs.live.net 223.5.5.5
 服务器:  public1.alidns.com
 Address:  223.5.5.5
@@ -51,30 +23,4 @@ Aliases:  *.docs.live.net
           common-afdrk.fe.1drv.com
           odc-commonafdrk-geo.onedrive.akadns.net
           odc-commonafdrk-brs.onedrive.akadns.net
-          common.be.1drv.com.l-0003.dc-msedge.net.l-0003.l-msedge.net
-
-C:\Repository\OneDriveHosts>nslookup settings.live.net 223.5.5.5
-服务器:  public1.alidns.com
-Address:  223.5.5.5
-
-非权威应答:
-名称:    l-0003.l-msedge.net
-Address:  13.107.42.12
-Aliases:  settings.live.net
-          common-afd.fe.1drv.com
-          odc-commonafd-geo.onedrive.akadns.net
-          odc-commonafd-brs.onedrive.akadns.net
-          common.be.1drv.com.l-0003.dc-msedge.net.l-0003.l-msedge.net
-
-C:\Repository\OneDriveHosts>nslookup storage.msn.com 223.5.5.5
-服务器:  public1.alidns.com
-Address:  223.5.5.5
-
-非权威应答:
-名称:    l-0003.l-msedge.net
-Address:  13.107.42.12
-Aliases:  storage.msn.com
-          common-afd.fe.1drv.com
-          odc-commonafd-geo.onedrive.akadns.net
-          odc-commonafd-brs.onedrive.akadns.net
           common.be.1drv.com.l-0003.dc-msedge.net.l-0003.l-msedge.net
