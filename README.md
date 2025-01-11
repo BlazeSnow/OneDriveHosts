@@ -14,21 +14,29 @@
 
 ## 被封锁的ip
 
-1. ```13.107.42.12```
+- ```13.107.42.12```
 
 ## 程序实现
 
-### 直接修改hosts文件
+> 任选其一即可
+
+### ①直接修改hosts文件
 
 hosts文件位置：```C:\WINDOWS\system32\drivers\etc\hosts```，在hosts文件内添加此文件内容：[点击跳转](/hosts)
 
-### 使用```SwitchHosts```
+### ②使用```SwitchHosts```
 
-```SwitchHosts```页面：<https://switchhosts.vercel.app/zh>
+官方网站：<https://switchhosts.vercel.app/zh>
 
-```SwitchHosts```下载链接：<https://github.com/oldj/SwitchHosts/releases>
+下载链接：<https://github.com/oldj/SwitchHosts/releases>
 
-若使用```SwitchHosts```工具：
+远程hosts文件URL：
+
+- Cloudflare：
+  
+```txt
+https://onedrivehosts.blazesnow.com/
+```
 
 - GitHub：
 ```txt
