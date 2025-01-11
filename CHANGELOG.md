@@ -1,5 +1,11 @@
 # 更新日志
 
+## v1.1.3
+
+2025年1月11日17点18分
+
+- 添加了Cloudflare源：<https://onedrivehosts.blazesnow.com/>
+
 ## v1.1.2
 
 2024年12月13日23点14分
