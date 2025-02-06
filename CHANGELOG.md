@@ -1,5 +1,11 @@
 # 更新日志
 
+## v1.1.4
+
+2025年2月6日17点21分
+
+- 合并仓库OneDriveHostsWebsite到OneDriveHosts
+
 ## v1.1.3
 
 2025年1月11日17点18分
