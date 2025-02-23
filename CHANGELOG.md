@@ -17,10 +17,10 @@
 2024年12月13日23点14分
 
 - 添加网址：
-    - apis.live.net
-    - docs.live.net
-    - settings.live.net
-    - storage.msn.com
+  - apis.live.net
+  - docs.live.net
+  - settings.live.net
+  - storage.msn.com
 - 来源：<https://learn.microsoft.com/zh-cn/sharepoint/required-urls-and-ports>
 
 ## v1.1.1
