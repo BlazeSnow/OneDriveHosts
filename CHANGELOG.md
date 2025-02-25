@@ -1,5 +1,12 @@
 # 更新日志
 
+## v1.1.5
+
+2025年2月23日12点31分
+
+- 添加网址：1drv.ms
+- 修改UsbEAm Hosts Editor链接为新版v4链接
+
 ## v1.1.4
 
 2025年2月6日17点21分
@@ -17,10 +24,10 @@
 2024年12月13日23点14分
 
 - 添加网址：
-    - apis.live.net
-    - docs.live.net
-    - settings.live.net
-    - storage.msn.com
+  - apis.live.net
+  - docs.live.net
+  - settings.live.net
+  - storage.msn.com
 - 来源：<https://learn.microsoft.com/zh-cn/sharepoint/required-urls-and-ports>
 
 ## v1.1.1
