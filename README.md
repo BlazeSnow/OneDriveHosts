@@ -18,10 +18,11 @@
 
 ## 程序成果
 
-<img src="image/effect.png" height=300>
+<img src="image/effect.png" width=400px>
 
 ## 程序使用方法
 
+> [!TIP]
 > 在以下两种方案中任选其一即可
 
 ### 一、手动修改
@@ -31,7 +32,7 @@
 1. 按下`Windows徽标`+`X`
 2. 选择`终端管理员`
 3. 输入以下命令并回车：
-4. 在hosts文件中添加内容：[hosts](hosts)
+4. 在hosts文件中添加内容：[前往查看hosts文件](hosts)
 
 ```shell
 notepad C:\Windows\System32\drivers\etc\hosts
