@@ -6,7 +6,7 @@ on:
       tag:
         description: 'Release tag'
         required: true
-        default: 'v1.1.6'
+        default: 'v2025.7.26.2'
 
 permissions:
   contents: write
@@ -20,5 +20,4 @@ jobs:
 
     - uses: ncipollo/release-action@v1
       with:
-        name: OneDriveHosts ${{ inputs.tag }}
         tag: ${{ inputs.tag }}
