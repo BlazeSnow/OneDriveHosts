@@ -18,7 +18,7 @@
 
 ## 程序成果
 
-<img src="image/effect.png" width=400px>
+<img src="image/effect.png" width=500px>
 
 ## 程序使用方法
 
@@ -40,7 +40,7 @@ notepad C:\Windows\System32\drivers\etc\hosts
 
 ### 二、SwitchHosts
 
-SwitchHosts 是一个管理、切换多个 hosts 方案的工具。它是一个免费开源软件。
+> SwitchHosts 是一个管理、切换多个 hosts 方案的工具。它是一个免费开源软件。
 
 - 官方地址：<https://switchhosts.vercel.app/zh>
 - 下载链接：<https://github.com/oldj/SwitchHosts/releases>
