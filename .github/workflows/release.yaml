@@ -1,0 +1,24 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Release tag'
+        required: true
+        default: 'v1.1.6'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - uses: ncipollo/release-action@v1
+      with:
+        name: OneDriveHosts ${{ inputs.tag }}
+        tag: ${{ inputs.tag }}
