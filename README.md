@@ -18,7 +18,7 @@
 
 ## 程序成果
 
-![effect](image/effect.png)
+<img src="image/effect.png" height=300>
 
 ## 程序使用方法
 
