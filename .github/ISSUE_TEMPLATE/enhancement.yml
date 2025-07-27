@@ -1,0 +1,64 @@
+name: 提交新的IP地址和域名等信息
+description: 提交IP地址和域名等信息，帮助OneDriveHosts适配更多网络环境。
+title: "[IP/域名提交] "
+labels: [ "submission" ]
+body:
+- type: textarea
+  id: ip
+  attributes:
+    label: IP地址
+    description: 请填写您发现的OneDrive IP地址（如有多个请回车分隔）
+    placeholder: 例如：13.107.43.12
+  validations:
+    required: true
+
+- type: textarea
+  id: domain
+  attributes:
+    label: 域名
+    description: 请填写您发现的OneDrive相关的域名（如有多个请回车分隔）
+    placeholder: 例如：1drv.ms
+  validations:
+    required: true
+
+- type: textarea
+  id: nslookup
+  attributes:
+    label: nslookup结果
+    description: 请粘贴您修改hosts前，执行nslookup的命令和输出
+    placeholder: |
+      例如：
+      PS C:\> nslookup 1drv.ms 8.8.8.8
+      服务器:  dns.google
+      Address:  8.8.8.8
+
+      非权威应答:
+      名称:    1drv.ms
+      Address:  13.107.42.12
+  validations:
+    required: true
+
+- type: textarea
+  id: ping
+  attributes:
+    label: ping结果
+    description: 请粘贴您修改hosts后，执行ping的命令和输出
+    placeholder: |
+      例如：
+      PS C:\> ping 1drv.ms
+      正在 Ping 1drv.ms [13.107.43.12] 具有 32 字节的数据:
+      来自 13.107.43.12 的回复: 字节=32 时间=62ms TTL=112
+      来自 13.107.43.12 的回复: 字节=32 时间=61ms TTL=112
+      来自 13.107.43.12 的回复: 字节=32 时间=61ms TTL=112
+      来自 13.107.43.12 的回复: 字节=32 时间=61ms TTL=112
+  validations:
+    required: true
+
+- type: textarea
+  id: additional
+  attributes:
+    label: 其他补充信息
+    description: 如果有其他相关信息或截图，请在此补充（可选）
+    placeholder: 例如：网络环境、操作系统等
+  validations:
+    required: false
