@@ -3,9 +3,11 @@
     "description": "OneDriveHosts",
     "main": "index.js",
     "scripts": {
-        "start": "node index.js"
+        "dev": "wrangler dev",
+        "deploy": "wrangler publish"
     },
     "dependencies": {
-        "express": "^5.1.0"
+        "express": "^5.1.0",
+        "wrangler": "^4.36.0"
     }
 }

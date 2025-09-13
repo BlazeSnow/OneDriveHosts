@@ -1,1 +1,1 @@
-npm.cmd run start
+npm.cmd run dev
