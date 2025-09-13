@@ -7,7 +7,6 @@
         "deploy": "wrangler publish"
     },
     "dependencies": {
-        "express": "^5.1.0",
         "wrangler": "^4.36.0"
     }
 }
