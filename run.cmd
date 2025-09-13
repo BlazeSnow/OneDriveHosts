@@ -1,0 +1,1 @@
+npm.cmd run start
