@@ -32,10 +32,11 @@ function generate(IP) {
         '# 来源：https://github.com/BlazeSnow/OneDriveHosts',
         '# 镜像：https://gitee.com/blazesnow/OneDriveHosts',
         `# 更新时间：${LastUpdated}`,
+        `# 使用IP地址：${IP}`,
         ''
     ];
 
-    const GeneralDomain = domains.map(domain => `${IP} ${domain}`);
+    const GeneralDomain = domains.GeneralDomain.map(domain => `${IP} ${domain}`);
 
     const Notes = [
         '',
@@ -44,7 +45,7 @@ function generate(IP) {
         ''
     ];
 
-    const SpecificDomain = domains.map(domain => `${IP} ${domain}`);
+    const SpecificDomain = domains.SpecificDomain.map(domain => `${IP} ${domain}`);
 
     const Foot = [
         '',
