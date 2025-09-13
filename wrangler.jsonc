@@ -1,0 +1,11 @@
+{
+    "name": "jump2com",
+    "compatibility_date": "2025-09-13",
+    "main": "index.js",
+    "workers_dev": true,
+    "preview_urls": true,
+    "observability": {
+        "enabled": true,
+        "head_sampling_rate": 1
+    }
+}
