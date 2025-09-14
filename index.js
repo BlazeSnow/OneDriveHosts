@@ -11,11 +11,22 @@ function generate(IP) {
     const Head = [
         '# ------以下是BlazeSnow/OneDriveHosts的内容------',
         '',
-        '# 来源：https://github.com/BlazeSnow/OneDriveHosts',
-        '# 镜像：https://gitee.com/blazesnow/OneDriveHosts',
-        '# 使用说明：https://www.blazesnow.com/OneDriveHosts/',
-        `# 更新时间：${LastUpdated}`,
-        `# 使用IP地址：${IP}`,
+        '# 来源: https://github.com/BlazeSnow/OneDriveHosts/',
+        '# 镜像: https://gitee.com/blazesnow/OneDriveHosts/',
+        '# 使用说明: https://www.blazesnow.com/OneDriveHosts/',
+        `# 更新时间: ${LastUpdated}`,
+        '',
+        '# ------------------------------------------------',
+        '',
+        '#             !!!!!!   警告   !!!!!!',
+        '',
+        '# 在未进行相关配置的情况下, ',
+        '# 如果下方显示的IP地址不一致, 请勿使用此项目!',
+        '',
+        `# 默认IP地址: ${DEFAULT_IP}`,
+        `# 当前IP地址: ${IP}`,
+        '',
+        '# ------------------------------------------------',
         ''
     ];
 
