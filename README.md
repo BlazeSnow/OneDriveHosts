@@ -93,7 +93,3 @@ https://gitee.com/blazesnow/OneDriveHosts/raw/main/hosts
 ```ansi
 https://onedrivehosts.blazesnow.com/?ip=13.107.42.12
 ```
-
-## 更新日志
-
-转到[更新日志](CHANGELOG.md)
