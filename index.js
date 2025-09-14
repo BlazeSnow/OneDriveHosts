@@ -41,12 +41,14 @@ function generate(IP) {
 async function handleRequest(request) {
     const url = new URL(request.url);
     const searchParams = url.searchParams;
+
     // 设置CORS头
     const corsHeaders = {
         'Access-Control-Allow-Origin': '*',
         'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
         'Access-Control-Allow-Headers': 'Content-Type',
     };
+
     // 处理OPTIONS请求
     if (request.method === 'OPTIONS') {
         return new Response(null, {
@@ -54,16 +56,19 @@ async function handleRequest(request) {
             headers: corsHeaders
         });
     }
+
     // 获取IP参数
     const inputIP = searchParams.get('ip');
     let useIP;
-    if (inputIP && isValidIP(inputIP)) {
+    if (inputIP) {
         useIP = inputIP;
     } else {
         useIP = DEFAULT_IP;
     }
+
     // 生成hosts内容
     const hostsContent = generate(useIP);
+
     return new Response(hostsContent, {
         status: 200,
         headers: {
