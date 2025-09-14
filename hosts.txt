@@ -1,8 +1,21 @@
 # ------以下是BlazeSnow/OneDriveHosts的内容------
 
-# 来源：https://github.com/BlazeSnow/OneDriveHosts
-# 镜像：https://gitee.com/blazesnow/OneDriveHosts
-# 更新时间：2025年2月23日12点24分
+# 来源: https://github.com/BlazeSnow/OneDriveHosts/
+# 镜像: https://gitee.com/blazesnow/OneDriveHosts/
+# 使用说明: https://www.blazesnow.com/OneDriveHosts/
+# 更新时间: 2025-02-23 12:24:00 (UTC+8)
+
+# ------------------------------------------------
+
+#             !!!!!!   警告   !!!!!!
+
+# 在未进行相关配置的情况下, 
+# 如果下方显示的IP地址不一致, 请勿使用此项目!
+
+# 默认IP地址: 13.107.43.12
+# 当前IP地址: 13.107.43.12
+
+# ------------------------------------------------
 
 13.107.43.12 1drv.ms
 13.107.43.12 apis.live.net
@@ -15,7 +28,6 @@
 # 以下内容来自UsbEAm Hosts Editor的规则
 # 来源：https://www.dogfight360.com/blog/18627/
 
-# 正常 storage.live.com
 13.107.43.12 public.bn.files.1drv.com
 13.107.43.12 bn1301.storage.live.com
 13.107.43.12 ams03pap004.storage.live.com
