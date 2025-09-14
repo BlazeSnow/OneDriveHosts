@@ -1,7 +1,7 @@
 import { domains } from './domains.js';
 
 // 更新时间
-const LastUpdated = '2025-09-14 14:51:07';
+const LastUpdated = '2025-02-23 12:24:00';
 
 // 默认IP地址
 const DEFAULT_IP = '13.107.43.12';
