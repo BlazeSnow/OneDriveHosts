@@ -83,7 +83,7 @@ https://gitee.com/blazesnow/OneDriveHosts/raw/main/hosts
 
 ## 自定义IP地址
 
-> [!danger]
+> [!CAUTION]
 > 请勿随意自定义IP地址
 
 若需要使用自定义的IP地址，可在本hosts文件URL的后端加上`/?ip=13.107.42.12`
