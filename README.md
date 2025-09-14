@@ -18,7 +18,7 @@
 
 ## 程序成果
 
-<img src="image/effect.png" width=500px>
+![method](image/effect.png)
 
 ## 程序使用方法
 
@@ -32,7 +32,7 @@
 1. 按下`Windows徽标`+`X`
 2. 选择`终端管理员`
 3. 输入以下命令并回车：
-4. 在hosts文件中添加内容：[前往查看hosts文件](hosts)
+4. 在hosts文件中添加内容：[前往查看hosts文件](https://onedrivehosts.blazesnow.com/)
 
 ```shell
 notepad C:\Windows\System32\drivers\etc\hosts
@@ -63,10 +63,33 @@ notepad C:\Windows\System32\drivers\etc\hosts
 
 #### 远程hosts文件URL
 
-- Cloudflare：<https://onedrivehosts.blazesnow.com/>
-- GitHub：<https://raw.githubusercontent.com/BlazeSnow/OneDriveHosts/main/hosts>
-- Gitee：<https://gitee.com/blazesnow/OneDriveHosts/raw/main/hosts>
+① Cloudflare：
 
-## 更新日志
+```ansi
+https://onedrivehosts.blazesnow.com/
+```
 
-转到[更新日志](CHANGELOG.md)
+② GitHub：
+
+```ansi
+https://raw.githubusercontent.com/BlazeSnow/OneDriveHosts/main/hosts
+```
+
+③ Gitee：
+
+```ansi
+https://gitee.com/blazesnow/OneDriveHosts/raw/main/hosts
+```
+
+## 自定义IP地址
+
+> [!CAUTION]
+> 请勿随意自定义IP地址
+
+若需要使用自定义的IP地址，可在hosts文件URL的后端加上`/?ip=13.107.42.12`
+
+> 自定义IP地址功能仅适用于Cloudflare版本URL
+
+```ansi
+https://onedrivehosts.blazesnow.com/?ip=13.107.42.12
+```

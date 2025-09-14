@@ -1,0 +1,12 @@
+{
+    "name": "onedrivehosts",
+    "description": "OneDriveHosts",
+    "main": "index.js",
+    "scripts": {
+        "dev": "wrangler dev",
+        "deploy": "wrangler deploy --config wrangler.jsonc"
+    },
+    "dependencies": {
+        "wrangler": "^4.36.0"
+    }
+}
