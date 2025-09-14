@@ -1,5 +1,5 @@
-import { doamins } from './domains.js';
-const domains = doamins;
+import { domains } from './domains.js';
+const domains = domains;
 
 // 更新时间
 const LastUpdated = '2025年2月23日12点24分';

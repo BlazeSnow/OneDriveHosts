@@ -1,4 +1,4 @@
-export const doamins = {
+export const domains = {
     "GeneralDomain": [
         "1drv.ms",
         "apis.live.net",
