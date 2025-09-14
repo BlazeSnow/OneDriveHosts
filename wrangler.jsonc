@@ -1,9 +1,16 @@
 {
     "name": "jump2com",
-    "compatibility_date": "2025-09-13",
+    "compatibility_date": "2025-09-14",
     "main": "index.js",
     "workers_dev": true,
     "preview_urls": true,
+    "routes": [
+        {
+            "pattern": "onedrivehosts.blazesnow.com",
+            "custom_domain": true,
+            "override_existing_dns_record": true
+        }
+    ],
     "observability": {
         "enabled": true,
         "head_sampling_rate": 1
