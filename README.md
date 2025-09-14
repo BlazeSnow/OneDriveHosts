@@ -86,7 +86,9 @@ https://gitee.com/blazesnow/OneDriveHosts/raw/main/hosts
 > [!CAUTION]
 > 请勿随意自定义IP地址
 
-若需要使用自定义的IP地址，可在本hosts文件URL的后端加上`/?ip=13.107.42.12`
+若需要使用自定义的IP地址，可在hosts文件URL的后端加上`/?ip=13.107.42.12`
+
+> 自定义IP地址功能仅适用于Cloudflare版本URL
 
 ```ansi
 https://onedrivehosts.blazesnow.com/?ip=13.107.42.12
