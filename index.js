@@ -1,4 +1,5 @@
-import { DOMAINS_DATA } from './domains.js';
+import { doamins } from './domains.js';
+const domains = doamins;
 
 // 更新时间
 const LastUpdated = '2025年2月23日12点24分';
@@ -8,8 +9,6 @@ const DEFAULT_IP = '13.107.43.12';
 
 // 生成hosts内容
 function generate(IP) {
-    const domains = DOMAINS_DATA;
-
     const Head = [
         '# ------以下是BlazeSnow/OneDriveHosts的内容------',
         '',
