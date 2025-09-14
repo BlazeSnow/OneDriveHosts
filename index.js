@@ -1,5 +1,4 @@
 import { domains } from './domains.js';
-const domains = domains;
 
 // 更新时间
 const LastUpdated = '2025年2月23日12点24分';
@@ -14,6 +13,7 @@ function generate(IP) {
         '',
         '# 来源：https://github.com/BlazeSnow/OneDriveHosts',
         '# 镜像：https://gitee.com/blazesnow/OneDriveHosts',
+        '# 使用说明：https://www.blazesnow.com/OneDriveHosts/',
         `# 更新时间：${LastUpdated}`,
         `# 使用IP地址：${IP}`,
         ''
