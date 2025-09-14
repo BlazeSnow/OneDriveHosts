@@ -105,4 +105,4 @@ export const domains = {
         "sjc04pap002.storage.live.com",
         "sjc04pap002files.storage.live.com"
     ]
-}
+};

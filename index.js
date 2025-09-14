@@ -44,7 +44,7 @@ function generate(IP) {
     const Foot = [
         '',
         '# ------以上是BlazeSnow/OneDriveHosts的内容------',
-    ]
+    ];
 
     return [...Head, ...GeneralDomain, ...Notes, ...SpecificDomain, ...Foot].join('\n');
 }
