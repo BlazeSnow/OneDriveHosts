@@ -1,8 +1,4 @@
-const express = require('express');
-const fs = require('fs');
-const path = require('path');
-const app = express();
-const port = 3000;
+import { DOMAINS_DATA } from './domains.js';
 
 // 更新时间
 const LastUpdated = '2025年2月23日12点24分';
@@ -10,21 +6,9 @@ const LastUpdated = '2025年2月23日12点24分';
 // 默认IP地址
 const DEFAULT_IP = '13.107.43.12';
 
-// 读取域名列表
-function loadDomains() {
-    try {
-        const domainsPath = path.join(__dirname, 'domains.json');
-        const data = fs.readFileSync(domainsPath, 'utf8');
-        return JSON.parse(data);
-    } catch (error) {
-        console.error('读取domains.json文件失败:', error);
-        return [];
-    }
-}
-
 // 生成hosts内容
 function generate(IP) {
-    const domains = loadDomains();
+    const domains = DOMAINS_DATA;
 
     const Head = [
         '# ------以下是BlazeSnow/OneDriveHosts的内容------',
@@ -55,25 +39,47 @@ function generate(IP) {
     return [...Head, ...GeneralDomain, ...Notes, ...SpecificDomain, ...Foot].join('\n');
 }
 
-// 首页路由
-app.get('/', (req, res) => {
-    // 获取IP地址
-    const inputIP = req.query.ip;
-    const useIP = inputIP && inputIP ? inputIP : DEFAULT_IP;
+async function handleRequest(request) {
+    const url = new URL(request.url);
+    const searchParams = url.searchParams;
+    // 设置CORS头
+    const corsHeaders = {
+        'Access-Control-Allow-Origin': '*',
+        'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
+        'Access-Control-Allow-Headers': 'Content-Type',
+    };
+    // 处理OPTIONS请求
+    if (request.method === 'OPTIONS') {
+        return new Response(null, {
+            status: 200,
+            headers: corsHeaders
+        });
+    }
+    // 获取IP参数
+    const inputIP = searchParams.get('ip');
+    let useIP;
+    if (inputIP && isValidIP(inputIP)) {
+        useIP = inputIP;
+    } else {
+        useIP = DEFAULT_IP;
+    }
+    // 生成hosts内容
+    const hostsContent = generate(useIP);
+    return new Response(hostsContent, {
+        status: 200,
+        headers: {
+            ...corsHeaders,
+            'Content-Type': 'text/plain; charset=utf-8'
+        }
+    });
+}
 
-    // 生成修改后的hosts内容
-    const HostsContent = generate(useIP);
-
-    // 设置响应头
-    res.setHeader('Content-Type', 'text/plain; charset=utf-8');
-
-    // 输出hosts内容
-    res.send(HostsContent);
+addEventListener('fetch', event => {
+    event.respondWith(handleRequest(event.request));
 });
 
-// 启动服务器
-app.listen(port, () => {
-    console.log(`OneDriveHosts已启动`);
-    console.log(`访问地址: http://localhost:${port}/?ip=0.0.0.0`);
-    console.log(`默认IP地址: ${DEFAULT_IP}`);
-});
+export default {
+    async fetch(request, env, ctx) {
+        return handleRequest(request);
+    }
+};
