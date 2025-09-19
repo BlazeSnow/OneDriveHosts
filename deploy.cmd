@@ -1,1 +1,0 @@
-npm.cmd run deploy

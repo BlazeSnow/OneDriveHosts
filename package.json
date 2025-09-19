@@ -2,11 +2,12 @@
     "name": "onedrivehosts",
     "description": "OneDriveHosts",
     "main": "index.js",
+    "type": "module",
     "scripts": {
-        "dev": "wrangler dev",
-        "deploy": "wrangler deploy --config wrangler.jsonc"
+        "start": "node index.js"
     },
     "dependencies": {
-        "wrangler": "^4.36.0"
+        "cors": "^2.8.5",
+        "express": "^5.1.0"
     }
 }
