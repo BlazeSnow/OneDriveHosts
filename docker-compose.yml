@@ -1,0 +1,15 @@
+networks:
+  blazesnow:
+    external: true
+    name: blazesnow
+
+services:
+  onedrivehosts:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: blazesnow/onedrivehosts:latest
+    container_name: onedrivehosts
+    restart: always
+    networks:
+      - blazesnow

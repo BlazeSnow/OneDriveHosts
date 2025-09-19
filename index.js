@@ -1,4 +1,9 @@
+import express from 'express';
+import cors from 'cors';
 import { domains } from './domains.js';
+const PORT = 3000;
+const app = express();
+app.use(cors());
 
 // 更新时间
 const LastUpdated = '2025-02-23 12:24:00';
@@ -49,52 +54,17 @@ function generate(IP) {
     return [...Head, ...GeneralDomain, ...Notes, ...SpecificDomain, ...Foot].join('\n');
 }
 
-async function handleRequest(request) {
-    const url = new URL(request.url);
-    const searchParams = url.searchParams;
+app.get('/', (req, res) => {
 
-    // 设置CORS头
-    const corsHeaders = {
-        'Access-Control-Allow-Origin': '*',
-        'Access-Control-Allow-Methods': 'GET, POST, OPTIONS',
-        'Access-Control-Allow-Headers': 'Content-Type',
-    };
+    const inputIP = req.query.ip;
+    const useIP = inputIP || DEFAULT_IP;
 
-    // 处理OPTIONS请求
-    if (request.method === 'OPTIONS') {
-        return new Response(null, {
-            status: 200,
-            headers: corsHeaders
-        });
-    }
-
-    // 获取IP参数
-    const inputIP = searchParams.get('ip');
-    let useIP;
-    if (inputIP) {
-        useIP = inputIP;
-    } else {
-        useIP = DEFAULT_IP;
-    }
-
-    // 生成hosts内容
     const hostsContent = generate(useIP);
+    res.set('Content-Type', 'text/plain; charset=utf-8');
 
-    return new Response(hostsContent, {
-        status: 200,
-        headers: {
-            ...corsHeaders,
-            'Content-Type': 'text/plain; charset=utf-8'
-        }
-    });
-}
-
-addEventListener('fetch', event => {
-    event.respondWith(handleRequest(event.request));
+    res.send(hostsContent);
 });
 
-export default {
-    async fetch(request, env, ctx) {
-        return handleRequest(request);
-    }
-};
+app.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
+});
