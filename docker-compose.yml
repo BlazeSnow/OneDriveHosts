@@ -8,7 +8,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: blazesnow/onedrivehosts:latest
+    image: registry.cn-hangzhou.aliyuncs.com/blazesnow/onedrivehosts:latest
     container_name: onedrivehosts
     restart: always
     networks:
