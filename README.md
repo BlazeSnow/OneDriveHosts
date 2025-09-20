@@ -63,19 +63,19 @@ notepad C:\Windows\System32\drivers\etc\hosts
 
 #### 远程hosts文件URL
 
-① Cloudflare：
+① blazesnow.com:
 
 ```ansi
 https://onedrivehosts.blazesnow.com/
 ```
 
-② GitHub：
+② GitHub:
 
 ```ansi
 https://raw.githubusercontent.com/BlazeSnow/OneDriveHosts/main/hosts
 ```
 
-③ Gitee：
+③ Gitee:
 
 ```ansi
 https://gitee.com/blazesnow/OneDriveHosts/raw/main/hosts
@@ -88,7 +88,7 @@ https://gitee.com/blazesnow/OneDriveHosts/raw/main/hosts
 
 若需要使用自定义的IP地址，可在hosts文件URL的后端加上`/?ip=13.107.42.12`
 
-> 自定义IP地址功能仅适用于Cloudflare版本URL
+> 自定义IP地址功能仅适用于blazesnow.com版本URL
 
 ```ansi
 https://onedrivehosts.blazesnow.com/?ip=13.107.42.12
