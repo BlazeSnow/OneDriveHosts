@@ -1,0 +1,13 @@
+version: 2
+updates:
+- package-ecosystem: "npm"
+  directory: "/"
+  schedule:
+    interval: "weekly"
+    timezone: "Asia/Chongqing"
+
+- package-ecosystem: "docker"
+  directory: "/"
+  schedule:
+    interval: "weekly"
+    timezone: "Asia/Chongqing"
