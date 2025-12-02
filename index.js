@@ -1,12 +1,7 @@
-import express from 'express';
-import cors from 'cors';
 import { domains } from './domains.js';
-const PORT = 3000;
-const app = express();
-app.use(cors());
 
 // 更新时间
-const LastUpdated = '2025-02-23 12:24:00';
+const LastUpdated = '2025-02-23T12:24:00+08:00';
 
 // 默认IP地址
 const DEFAULT_IP = '13.107.43.12';
@@ -19,7 +14,7 @@ function generate(IP) {
         '# 来源: https://github.com/BlazeSnow/OneDriveHosts/',
         '# 镜像: https://gitee.com/blazesnow/OneDriveHosts/',
         '# 使用说明: https://www.blazesnow.com/OneDriveHosts/',
-        `# 更新时间: ${LastUpdated} (UTC+8)`,
+        `# 更新时间: ${LastUpdated}`,
         '',
         '# ------------------------------------------------',
         '',
@@ -54,17 +49,36 @@ function generate(IP) {
     return [...Head, ...GeneralDomain, ...Notes, ...SpecificDomain, ...Foot].join('\n');
 }
 
-app.get('/', (req, res) => {
+export default {
+    async fetch(request, env, ctx) {
+        // 设置CORS头
+        const corsHeaders = {
+            'Access-Control-Allow-Origin': '*',
+            'Access-Control-Allow-Methods': 'GET, OPTIONS',
+            'Access-Control-Allow-Headers': 'Content-Type',
+        };
 
-    const inputIP = req.query.ip;
-    const useIP = inputIP || DEFAULT_IP;
+        // 处理OPTIONS
+        if (request.method === 'OPTIONS') {
+            return new Response(null, {
+                headers: corsHeaders
+            });
+        }
 
-    const hostsContent = generate(useIP);
-    res.set('Content-Type', 'text/plain; charset=utf-8');
+        // 获取查询参数
+        const url = new URL(request.url);
+        const inputIP = url.searchParams.get('ip');
+        const useIP = inputIP || DEFAULT_IP;
 
-    res.send(hostsContent);
-});
+        // 生成 hosts
+        const hostsContent = generate(useIP);
 
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
-});
+        // 返回响应
+        return new Response(hostsContent, {
+            headers: {
+                'Content-Type': 'text/plain; charset=utf-8',
+                ...corsHeaders
+            }
+        });
+    }
+};
