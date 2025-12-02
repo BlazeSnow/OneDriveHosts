@@ -4,12 +4,12 @@
     "main": "index.js",
     "workers_dev": true,
     "preview_urls": false,
-    // "routes": [
-    //     {
-    //         "pattern": "onedrivehosts.blazesnow.com",
-    //         "custom_domain": true
-    //     }
-    // ],
+    "routes": [
+        {
+            "pattern": "onedrivehosts.blazesnow.com",
+            "custom_domain": true
+        }
+    ],
     "observability": {
         "enabled": true,
         "head_sampling_rate": 1
