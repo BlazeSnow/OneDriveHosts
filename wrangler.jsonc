@@ -1,8 +1,8 @@
 {
     "name": "onedrivehosts",
-    "compatibility_date": "2025-12-02",
+    "compatibility_date": "2025-12-10",
     "main": "index.js",
-    "workers_dev": true,
+    "workers_dev": false,
     "preview_urls": false,
     "routes": [
         {
