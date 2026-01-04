@@ -1,5 +1,6 @@
 {
     "name": "onedrivehosts",
+    "account_id": "14a25367477915c591c3876b305a8e54",
     "compatibility_date": "2025-11-17",
     "main": "index.js",
     "workers_dev": false,
