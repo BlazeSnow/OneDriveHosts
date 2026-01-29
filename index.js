@@ -13,7 +13,7 @@ function generate(IP) {
         '',
         '# 来源: https://github.com/BlazeSnow/OneDriveHosts/',
         '# 镜像: https://gitee.com/blazesnow/OneDriveHosts/',
-        '# 使用说明: https://www.blazesnow.com/OneDriveHosts/',
+        '# 使用说明: https://www.blazesnow.com/onedrivehosts/',
         `# 更新时间: ${LastUpdated}`,
         '',
         '# ------------------------------------------------',
