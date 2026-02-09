@@ -1,7 +1,7 @@
 {
     "name": "onedrivehosts",
     "account_id": "14a25367477915c591c3876b305a8e54",
-    "compatibility_date": "2025-11-17",
+    "compatibility_date": "2026-01-20",
     "main": "index.js",
     "workers_dev": false,
     "preview_urls": false,
@@ -12,16 +12,6 @@
         }
     ],
     "observability": {
-        "logs": {
-            "enabled": true,
-            "head_sampling_rate": 1,
-            "persist": true,
-            "invocation_logs": true
-        },
-        "traces": {
-            "enabled": true,
-            "head_sampling_rate": 1,
-            "persist": true
-        }
+        "enabled": false
     }
 }
