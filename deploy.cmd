@@ -1,1 +1,1 @@
-npm run deploy
+pnpm run deploy
