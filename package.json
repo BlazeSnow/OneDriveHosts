@@ -2,7 +2,7 @@
     "name": "onedrivehosts",
     "description": "OneDriveHosts",
     "type": "module",
-    "main": "index.js",
+    "main": "middleware.js",
     "scripts": {
         "dev": "edgeone pages dev",
         "deploy": "edgeone pages deploy -n onedrivehosts"
