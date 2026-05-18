@@ -1,4 +1,7 @@
 node_modules/
 .wrangler/
-.edgeone/
 pnpm-workspace.yaml
+.env
+.edgeone/
+.tef_dist/
+  
