@@ -1,135 +1,139 @@
 # 更新日志
 
+## v2026.5.18.0
+
+1. 切换项目至edgeone
+
 ## v2026.1.31.1
 
-- 优化了说明文档的链接
+1. 优化了说明文档的链接
 
 ## v2025.12.2.1
 
 2025-12-02 18:26:00
 
-- 撤销了`v2025.9.19.1`的改动
+1. 撤销了`v2025.9.19.1`的改动
 
 ## v2025.9.19.1
 
 2025-09-19 21:46:53
 
-- 将主项目从Cloudflare Workers转移到服务器
+1. 将主项目从Cloudflare Workers转移到服务器
 
 ## v2025.9.14.1
 
 2025-09-14 14:56:12
 
-- 为项目添加了自定义IP地址功能（只适用于主域名）
+1. 为项目添加了自定义IP地址功能（只适用于主域名）
 
 ## v2025.7.26.2
 
 2025-07-26 21:51:00
 
-- 撤销对说明文档的迁移
-- 补全了说明文档中的具体操作方法
+1. 撤销对说明文档的迁移
+2. 补全了说明文档中的具体操作方法
 
 ## v1.1.6
 
 2025-07-26 17:23:00
 
-- 优化OneDriveHosts说明文档，并迁移文档
+1. 优化OneDriveHosts说明文档，并迁移文档
 
 ## v1.1.5
 
 2025-02-23 12:31:00
 
-- 添加网址：1drv.ms
-- 修改UsbEAm Hosts Editor链接为新版v4链接
+1. 添加网址：1drv.ms
+2. 修改UsbEAm Hosts Editor链接为新版v4链接
 
 ## v1.1.4
 
 2025-02-06 17:21:00
 
-- 合并仓库OneDriveHostsWebsite到OneDriveHosts
+1. 合并仓库OneDriveHostsWebsite到OneDriveHosts
 
 ## v1.1.3
 
 2025-01-11 17:18:00
 
-- 添加了Cloudflare源：<https://onedrivehosts.blazesnow.com/>
+1. 添加了Cloudflare源：<https://onedrivehosts.blazesnow.com/>
 
 ## v1.1.2
 
 2024-12-13 23:14:00
 
-- 添加网址：
-  - apis.live.net
-  - docs.live.net
-  - settings.live.net
-  - storage.msn.com
-- 来源：<https://learn.microsoft.com/zh-cn/sharepoint/required-urls-and-ports>
+1. 添加网址：
+   1. apis.live.net
+   2. docs.live.net
+   3. settings.live.net
+   4. storage.msn.com
+2. 来源：<https://learn.microsoft.com/zh-cn/sharepoint/required-urls-and-ports>
 
 ## v1.1.1
 
 2024-12-05 11:42:00
 
-- 优化了使用说明
-- 删去一条多余的```chi01pap002.storage.live.com```
+1. 优化了使用说明
+2. 删去一条多余的```chi01pap002.storage.live.com```
 
 ## v1.1.0
 
 2024-12-05 11:27:00
 
-- 补充了```UsbEAm Hosts Editor```的规则，使hosts解析更完整
-- 来源：<https://www.dogfight360.com/blog/475/>
+1. 补充了```UsbEAm Hosts Editor```的规则，使hosts解析更完整
+2. 来源：<https://www.dogfight360.com/blog/475/>
 
 ## v1.0.7
 
 2024-10-07 11:20:00
 
-- 使用稳定ip地址13.107.43.12
+1. 使用稳定ip地址13.107.43.12
 
 ## v1.0.6
 
 2024-10-02 10:21:00
 
-- 删去python脚本
-- 更新hosts文件格式
-- 放入多个ip地址
+1. 删去python脚本
+2. 更新hosts文件格式
+3. 放入多个ip地址
 
 ## v1.0.5
 
 2024-09-25 08:14:00
 
-- ip地址13.107.43.12失效，更换为20.143.38.2
-- 优化时间格式
-- 自动化脚本不可用，已删除
-- 加入ping指令，便于测试连通性
+1. ip地址13.107.43.12失效，更换为20.143.38.2
+2. 优化时间格式
+3. 自动化脚本不可用，已删除
+4. 加入ping指令，便于测试连通性
 
 ## v1.0.4
 
 2024-09-23 16:48:00
 
-- 优化文字表述
-- 在hosts文件内加上了来源和更新时间
+1. 优化文字表述
+2. 在hosts文件内加上了来源和更新时间
 
 ## v1.0.3
 
 2024-09-21 11:21:00
 
-- 在Gitee上新增同步仓库，仅作同步用途
+1. 在Gitee上新增同步仓库，仅作同步用途
 
 ## v1.0.2
 
 2024-09-21 11:13:00
 
-- 新增一个被封锁的网址：d.docs.live.net
+1. 新增一个被封锁的网址：d.docs.live.net
 
 ## v1.0.1
 
 2024-09-11 14:57:00
 
-- 更新了python自动化脚本
+1. 更新了python自动化脚本
 
 ## v1.0.0
 
 2024-09-11 09:17:00
 
-- 更新第一版
-- 被封锁的ip地址：13.107.42.12
+1. 更新第一版
+2. 被封锁的ip地址：13.107.42.12
