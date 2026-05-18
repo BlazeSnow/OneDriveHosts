@@ -1,12 +1,9 @@
 import { domains } from './domains.js';
 
-// 更新时间
 const LastUpdated = '2025-02-23T12:24:00+08:00';
 
-// 默认IP地址
 const DEFAULT_IP = '13.107.43.12';
 
-// 生成hosts内容
 function generate(IP) {
     const Head = [
         '# ------以下是BlazeSnow/OneDriveHosts的内容------',
@@ -49,36 +46,33 @@ function generate(IP) {
     return [...Head, ...GeneralDomain, ...Notes, ...SpecificDomain, ...Foot].join('\n');
 }
 
-export default {
-    async fetch(request, env, ctx) {
-        // 设置CORS头
-        const corsHeaders = {
-            'Access-Control-Allow-Origin': '*',
-            'Access-Control-Allow-Methods': 'GET, OPTIONS',
-            'Access-Control-Allow-Headers': 'Content-Type',
-        };
+export function middleware(context) {
+    const { request } = context;
 
-        // 处理OPTIONS
-        if (request.method === 'OPTIONS') {
-            return new Response(null, {
-                headers: corsHeaders
-            });
-        }
-
-        // 获取查询参数
-        const url = new URL(request.url);
-        const inputIP = url.searchParams.get('ip');
-        const useIP = inputIP || DEFAULT_IP;
-
-        // 生成 hosts
-        const hostsContent = generate(useIP);
-
-        // 返回响应
-        return new Response(hostsContent, {
+    if (request.method === 'OPTIONS') {
+        return new Response(null, {
             headers: {
-                'Content-Type': 'text/plain; charset=utf-8',
-                ...corsHeaders
+                'Access-Control-Allow-Origin': '*',
+                'Access-Control-Allow-Methods': 'GET, OPTIONS',
+                'Access-Control-Allow-Headers': 'Content-Type',
             }
         });
     }
+
+    const url = new URL(request.url);
+    const inputIP = url.searchParams.get('ip');
+    const useIP = inputIP || DEFAULT_IP;
+
+    const hostsContent = generate(useIP);
+
+    return new Response(hostsContent, {
+        headers: {
+            'Content-Type': 'text/plain; charset=utf-8',
+            'Access-Control-Allow-Origin': '*',
+        }
+    });
+}
+
+export const config = {
+    matcher: ['/:path*'],
 };
