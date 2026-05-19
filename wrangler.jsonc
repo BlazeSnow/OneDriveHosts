@@ -7,7 +7,7 @@
     "preview_urls": false,
     "routes": [
         {
-            "pattern": "onedrivehosts.blazesnow.com",
+            "pattern": "onedrivehosts.blazesnow.com/*",
             "custom_domain": true
         }
     ],
