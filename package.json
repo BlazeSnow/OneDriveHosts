@@ -2,12 +2,11 @@
     "name": "onedrivehosts",
     "description": "OneDriveHosts",
     "type": "module",
-    "main": "middleware.js",
     "scripts": {
-        "dev": "edgeone pages dev",
-        "deploy": "edgeone pages deploy -n onedrivehosts"
+        "dev": "wrangler dev",
+        "deploy": "wrangler deploy"
     },
     "devDependencies": {
-        "edgeone": "^1.4.9"
+        "wrangler": "^4.92.0"
     }
 }
