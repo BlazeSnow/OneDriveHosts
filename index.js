@@ -46,33 +46,29 @@ function generate(IP) {
     return [...Head, ...GeneralDomain, ...Notes, ...SpecificDomain, ...Foot].join('\n');
 }
 
-export function middleware(context) {
-    const { request } = context;
+export default {
+    async fetch(request, env, ctx) {
+        if (request.method === 'OPTIONS') {
+            return new Response(null, {
+                headers: {
+                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Methods': 'GET, OPTIONS',
+                    'Access-Control-Allow-Headers': 'Content-Type',
+                }
+            });
+        }
 
-    if (request.method === 'OPTIONS') {
-        return new Response(null, {
+        const url = new URL(request.url);
+        const inputIP = url.searchParams.get('ip');
+        const useIP = inputIP || DEFAULT_IP;
+
+        const hostsContent = generate(useIP);
+
+        return new Response(hostsContent, {
             headers: {
+                'Content-Type': 'text/plain; charset=utf-8',
                 'Access-Control-Allow-Origin': '*',
-                'Access-Control-Allow-Methods': 'GET, OPTIONS',
-                'Access-Control-Allow-Headers': 'Content-Type',
             }
         });
     }
-
-    const url = new URL(request.url);
-    const inputIP = url.searchParams.get('ip');
-    const useIP = inputIP || DEFAULT_IP;
-
-    const hostsContent = generate(useIP);
-
-    return new Response(hostsContent, {
-        headers: {
-            'Content-Type': 'text/plain; charset=utf-8',
-            'Access-Control-Allow-Origin': '*',
-        }
-    });
-}
-
-export const config = {
-    matcher: ['/:path*'],
 };
