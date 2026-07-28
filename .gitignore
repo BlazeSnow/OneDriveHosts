@@ -2,4 +2,3 @@ node_modules/
 .wrangler/
 .env
 .claude/
-pnpm-workspace.yaml
