@@ -1,5 +1,6 @@
 {
     "name": "onedrivehosts",
+    "version": "2026.8.8.0",
     "description": "OneDriveHosts",
     "type": "module",
     "scripts": {
