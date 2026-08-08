@@ -1,5 +1,9 @@
 # 更新日志
 
+## v2026.8.8.0
+
+1. 优化Cloudflare加速效果
+
 ## v2026.5.19.0
 
 1. 回退项目至Cloudflare Workers
