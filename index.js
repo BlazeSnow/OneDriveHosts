@@ -1,8 +1,8 @@
 import { domains } from './domains.js';
 
-const LastUpdated = '2025-02-23T12:24:00+08:00';
+const LastUpdated = '2026-08-31T10:07:38+08:00';
 
-const DEFAULT_IP = '13.107.43.12';
+const DEFAULT_IP = '150.171.23.11';
 
 function generate(IP) {
     const Head = [
