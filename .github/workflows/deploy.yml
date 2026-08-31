@@ -1,0 +1,38 @@
+name: Deploy
+
+on:
+  push:
+    branches:
+    - main
+    - dev
+  workflow_dispatch:
+
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: wrangler
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v7
+
+    - name: Deploy beta
+      if: github.ref_name != 'main'
+      uses: cloudflare/wrangler-action@v4
+      with:
+        apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        command: deploy --config wrangler.beta.jsonc
+
+    - name: Deploy prod
+      if: github.ref_name == 'main'
+      uses: cloudflare/wrangler-action@v4
+      with:
+        apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        command: deploy --config wrangler.prod.jsonc
