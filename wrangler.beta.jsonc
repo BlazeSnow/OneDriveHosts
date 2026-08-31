@@ -1,0 +1,29 @@
+{
+    "name": "onedrivehostsbeta",
+    "compatibility_date": "2026-08-04",
+    "main": "index.js",
+    "rules": [
+        {
+            "type": "Text",
+            "fallthrough": true,
+            "globs": ["**/VERSION"]
+        }
+    ],
+    "workers_dev": false,
+    "preview_urls": false,
+    "routes": [
+        {
+            "pattern": "beta.onedrivehosts.blazesnow.com",
+            "custom_domain": true
+        }
+    ],
+    "observability": {
+        "logs": {
+            "enabled": false,
+            "invocation_logs": false
+        },
+        "traces": {
+            "enabled": false
+        }
+    }
+}

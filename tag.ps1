@@ -1,15 +1,20 @@
 Set-Location $PSScriptRoot
 
-$versionJson = npm pkg get version
-if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-
-try {
-  $version = $versionJson | ConvertFrom-Json
-}
-catch {
-  Write-Error 'Unable to read the package version.'
+$versionFile = Join-Path $PSScriptRoot 'VERSION'
+if (-not (Test-Path $versionFile)) {
+  Write-Error 'VERSION file not found.'
   exit 1
 }
+
+try {
+  $version = (Get-Content $versionFile -Raw).Trim()
+}
+catch {
+  Write-Error 'Unable to read the VERSION file.'
+  exit 1
+}
+
+$version = $version.TrimStart('v')
 
 if ([string]::IsNullOrWhiteSpace($version)) {
   Write-Error 'Package version is empty.'
