@@ -2,9 +2,16 @@ import { domains } from './domains.js';
 
 const LastUpdated = '2026-08-31T10:07:38+08:00';
 
-const DEFAULT_IP = '150.171.23.11';
+const DEFAULT_IPS = ['150.171.23.11', '150.171.22.11'];
 
-function generate(IP) {
+const IPV4_PATTERN = /^(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}$/;
+
+function parseIPs(input) {
+    const ips = (input || '').split(/[,\s]+/).filter(ip => IPV4_PATTERN.test(ip));
+    return ips.length > 0 ? ips : DEFAULT_IPS;
+}
+
+function generate(ips, custom = false) {
     const Head = [
         '# ------以下是BlazeSnow/OneDriveHosts的内容------',
         '',
@@ -14,20 +21,25 @@ function generate(IP) {
         `# 更新时间: ${LastUpdated}`,
         '',
         '# ------------------------------------------------',
-        '',
-        '#             !!!!!!   警告   !!!!!!',
-        '',
-        '# 在未进行相关配置的情况下, ',
-        '# 如果下方显示的IP地址不一致, 请勿使用此项目!',
-        '',
-        `# 默认IP地址: ${DEFAULT_IP}`,
-        `# 当前IP地址: ${IP}`,
-        '',
-        '# ------------------------------------------------',
         ''
     ];
 
-    const GeneralDomain = domains.GeneralDomain.map(domain => `${IP} ${domain}`);
+    if (custom) {
+        Head.push(
+            '#             !!!!!!   警告   !!!!!!',
+            '',
+            '# 在未进行相关配置的情况下, ',
+            '# 如果下方显示的IP地址不一致, 请勿使用此项目!',
+            '',
+            `# 默认IP地址: ${DEFAULT_IPS.join(', ')}`,
+            `# 当前IP地址: ${ips.join(', ')}`,
+            '',
+            '# ------------------------------------------------',
+            ''
+        );
+    }
+
+    const GeneralDomain = domains.GeneralDomain.flatMap(domain => ips.map(ip => `${ip} ${domain}`));
 
     const Notes = [
         '',
@@ -36,7 +48,7 @@ function generate(IP) {
         ''
     ];
 
-    const SpecificDomain = domains.SpecificDomain.map(domain => `${IP} ${domain}`);
+    const SpecificDomain = domains.SpecificDomain.flatMap(domain => ips.map(ip => `${ip} ${domain}`));
 
     const Foot = [
         '',
@@ -45,6 +57,8 @@ function generate(IP) {
 
     return [...Head, ...GeneralDomain, ...Notes, ...SpecificDomain, ...Foot].join('\n');
 }
+
+export { generate };
 
 export default {
     async fetch(request, env, ctx) {
@@ -59,10 +73,10 @@ export default {
         }
 
         const url = new URL(request.url);
-        const inputIP = url.searchParams.get('ip');
-        const useIP = inputIP || DEFAULT_IP;
+        const useIPs = parseIPs(url.searchParams.get('ip'));
+        const custom = useIPs.join(',') !== DEFAULT_IPS.join(',');
 
-        const hostsContent = generate(useIP);
+        const hostsContent = generate(useIPs, custom);
 
         return new Response(hostsContent, {
             headers: {
