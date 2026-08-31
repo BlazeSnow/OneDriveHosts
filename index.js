@@ -1,6 +1,5 @@
 import { domains } from './domains.js';
-
-const LastUpdated = '2026-08-31T10:07:38+08:00';
+import version from './VERSION';
 
 const DEFAULT_IPS = ['150.171.23.11', '150.171.22.11'];
 
@@ -18,7 +17,7 @@ function generate(ips, custom = false) {
         '# 来源: https://github.com/BlazeSnow/OneDriveHosts/',
         '# 镜像: https://gitee.com/blazesnow/OneDriveHosts/',
         '# 使用说明: https://www.blazesnow.com/onedrivehosts/',
-        `# 更新时间: ${LastUpdated}`,
+        `# 版本: ${version}`,
         '',
         '# ------------------------------------------------',
         ''
