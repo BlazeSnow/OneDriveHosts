@@ -16,3 +16,4 @@ jobs:
       uses: ncipollo/release-action@v1
       with:
         tag: ${{ github.ref_name }}
+        body: https://github.com/BlazeSnow/OneDriveHosts/blob/main/CHANGELOG.md
